@@ -1,0 +1,151 @@
+.help-center-content{
+  margin-bottom:20px;
+  &-main{
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+  }
+}
+.calculate-cost{
+  &-title{
+    border-bottom:1px solid #dfdfdf;
+    padding:20px;
+    font-size:16px;
+    color: #333;
+  }
+  &-content{
+    padding:20px;
+    p{
+      line-height: 48px;
+
+      label{
+        display: inline-block;
+        vertical-align: middle;
+        font-size:16px;
+        color: #333;
+        &.label-amt:after{
+          display: inline-block;
+          margin-left: 4px;
+          content: "*";
+          font-family: SimSun;
+          line-height: 1;
+          font-size: 12px;
+          color: #f04134;
+        }
+      }
+      input{
+        display: inline-block;
+        vertical-align: middle;
+        width:50%;
+        margin-left:10px;
+        font-size:14px;
+      }
+      button{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left:26px;
+        padding:0 32px;
+        font-size:14px;
+        text-align: center;
+        span{
+          margin:0;
+        }
+      }
+      span{
+        display: inline-block;
+        vertical-align: middle;
+        font-size:16px;
+        margin-left:10px;
+        margin-right:30px;
+      }
+    }
+    .tips{
+      font-size:14px;
+      color: #999;
+    }
+  }
+  &-table{
+    padding:20px;
+    h3{
+      font-size:16px;
+      color: #333;
+      margin-bottom:10px;
+      &.margin-top-10{
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+    table{
+      border: 1px solid #DFDFDF;
+      border-radius: 4px 4px 0 0;
+      width:100%;
+      font-size:14px;
+      color: #333;
+      tr{
+        td{
+          &:nth-of-type(1){
+            width:33.33%;
+            padding-left: 6%;
+          }
+          &:nth-of-type(2){
+            width:33.33%;
+            padding-left: 0;
+          }
+        }
+      }
+      thead{
+        tr{
+          line-height: 52px;
+          background-color: #f8f8f8;
+        }
+      }
+      tbody{
+        tr{
+          line-height: 40px;
+          border-bottom: 1px solid #dfdfdf;
+        }
+      }
+    }
+  }
+}
+
+.template-download{
+  padding:30px 40px;
+  &-list{
+    &-item{
+      font-size:16px;
+      line-height: 40px;
+      border-bottom: 1px solid #dfdfdf;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.arbitration-clause{
+  padding:20px 40px;
+  h2{
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+  }
+  h3{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+  }
+  p{
+    color: #333;
+    font-size:14px;
+    line-height: 2;
+    &.align-center{
+      text-align: center;
+    }
+    &.p-indent{
+      text-indent:28px;
+    }
+    &.font-12{
+      font-size: 12px;
+    }
+  }
+}
+

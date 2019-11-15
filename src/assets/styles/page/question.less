@@ -1,0 +1,102 @@
+@headerW:130px;
+.question{
+  &-content{
+    padding: 10px 20px 20px;
+    font-size: 14px;
+    &>header{
+      display: flex;
+      align-items: center;
+      margin: 20px auto;
+      h2{
+        width: @headerW;
+        text-align: center;
+        font-weight: normal;
+        &>*{
+          display: block;
+        }
+        strong{
+          width: 32px;
+          height: 32px;
+          line-height: 32px;
+          border-radius: 50%;
+          background-color: #20C1DC;
+          color: #fff;
+          font-size: 18px;
+          margin: 0 auto;
+        }
+        span{
+          color: #333;
+        }
+        em{
+          color: #999;
+        }
+      }
+      article{
+        flex: 1;
+        padding: 16px 10px;
+        background-color: #F1F4F9;
+        border: 1px solid #DFDFDF;
+        border-radius: 4px;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          background-color: #F1F4F9;
+          border-top: 1px solid #dfdfdf;
+          border-left: 1px solid #dfdfdf;
+          transform: rotate(-45deg);
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          left: -6px;
+        }
+        time{
+          text-align: right;
+          display: block;
+        }
+      }
+    }
+  }
+  &-answer{
+    display: flex;
+    &>header{
+      width: @headerW;
+      text-align: center;
+      padding-top: 10px;
+      color: #333;
+    }
+    &>article{
+      flex: 1;
+    }
+    &-input{
+      .ant-form-item{
+        margin-bottom: 10px;
+      }
+      textarea{
+        font-size: 14px;
+        resize:none;
+        padding: 10px;
+        margin-bottom: 2px;
+        border: 1px dashed #dfdfdf;
+        border-radius: 0;
+      }
+    }
+    &-content{
+      border: 1px dashed #dfdfdf;
+      margin-bottom: 10px;
+      &-item{
+        border-bottom: 1px dashed #dfdfdf;
+        padding: 10px;
+        &:last-child{
+          border-bottom: none;
+        }
+        time{
+          text-align: right;
+          display: block;
+        }
+      }
+    }
+  }
+}

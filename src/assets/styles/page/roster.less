@@ -1,0 +1,64 @@
+@roster: roster;
+.@{roster} {
+  table{
+    margin: 0;
+  }
+  &-label {
+    .search-title {
+      font-size: 14px;
+      color: #333333;
+    }
+    input {
+      width: 246px;
+      margin: 0 29px 0 9px;
+    }
+    button {
+      width: 100px;
+    }
+  }
+
+  &-toggleArray{
+    text-align: right;
+    line-height: 20px;
+    margin: 9px 0 4px;
+    a{
+      display: inline-block;
+      padding: 0 6px;
+    }
+  }
+
+  .list{
+    overflow: hidden;
+    .listItem:nth-child(odd){
+      margin-right: 2%;
+    }
+ 
+  }
+  .listItem{
+    float: left;
+    width: 49%;
+    height: 200px;
+    background: #F7F7F7;
+    border: 1px solid #E9E9E9;
+    border-radius: 4px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    .img{
+      width: 124px;
+      height: 160px;
+      // background: #E7E7E7;
+      border: 1px solid #CFCFCF;
+    }
+    .info{
+       width: 270px;
+      padding-left: 22px;
+      float: right;
+      p{
+        font-size: 14px;
+        color: #333333;
+        line-height: 24px;
+      }
+    }
+  }
+
+}

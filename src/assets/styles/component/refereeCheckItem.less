@@ -1,0 +1,63 @@
+.referee-check-item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  &>header{
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+    width: 90px;
+    margin-right: 10px;
+  }
+  .no-check{
+    font-size: 14px;
+    color: #333333;
+    .dot{
+      margin-right: 5px;
+      color: #AAAAAA;
+    }
+  }
+  .referee-detail{
+    display: flex;
+    background-color: #f8f8f8;
+    width: 300px;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px;
+    &-current{
+      background-color: #E0F7FA;
+      border: 1px dashed #20C1DC;
+    }
+    &>header{
+      width: 66px;
+      height: 66px;
+      text-align: center;
+      img{
+        width: 66px;
+        height: 66px;
+      }
+    }
+
+    &>footer{
+      display: flex;
+      width: 205px;
+      height: 66px;
+      flex-direction: column;
+      margin-left: 10px;
+      justify-content: space-around;
+      color: #666666;
+      font-size: 12px;
+      &>*{
+        display: block;
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+      }
+      h3{
+        font-size: 14px;
+        font-weight: normal;
+        color: #333333;
+      }
+    }
+  }
+}

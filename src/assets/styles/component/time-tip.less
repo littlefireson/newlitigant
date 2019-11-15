@@ -1,0 +1,33 @@
+@timeTip:time-tip;
+.time-box{
+  border: 1px solid #FFE9A7;
+  margin-bottom: 20px;
+}
+.@{timeTip}{
+  background: #FFFAEB;
+  border-bottom: 1px solid #FFE9A7;
+  border-radius: 2px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #333333;
+  display: flex;
+  vertical-align: middle;
+  &:last-child{
+    border-bottom: none;
+  }
+  article{
+    flex: 1;
+  }
+  time{
+    color: #666666;
+  }
+  i,strong,span{
+    margin-right: 8px;
+  }
+  i{
+    margin-top: 1.5px;
+  }
+  em{
+    color: #999
+  }
+}

@@ -1,0 +1,275 @@
+//清除浮动
+.clearfix{
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+//居中
+.m-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-center{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.container{
+  width: 100%;
+  //min-width: 1000px;
+  .m-center;
+}
+// 超出长度的文本显示省略号
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//左浮动
+.fl{
+  float: left;
+}
+//右浮动
+.fr{
+  float: right;
+}
+//placeholder 颜色设置
+.placeholder(@color) {
+  &:-moz-placeholder {
+    color: @color;
+  }
+  &::-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+}
+// 三角
+.triangle-down(@color:#ccc) {
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid dashed dotted dashed;
+  border-color: @color transparent transparent transparent;
+  vertical-align: middle;
+  display: inline-block;
+}
+.triangle-left(@color:#ccc) {
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: dashed solid dashed dotted;
+  border-color: transparent @color  transparent transparent;
+  vertical-align: middle;
+  display: inline-block;
+}
+.triangle-up(@color:#ccc) {
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: dotted dashed solid dashed;
+  border-color: transparent  transparent @color;
+  vertical-align: middle;
+  display: inline-block;
+}
+.triangle-right(@color:#ccc) {
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: dashed dotted dashed solid;
+  border-color: transparent  transparent transparent @color;
+  vertical-align: middle;
+  display: inline-block;
+}
+//禁用
+.disabled,button[disabled] {
+  cursor: default !important;
+  pointer-events: none;
+  opacity: .5;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+//路由
+.route-layout{
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.left-enter {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  //background: #fff;
+  z-index: 900;
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+.left-enter.left-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+}
+
+.left-leave {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(0);
+}
+
+.left-leave.left-leave-active {
+  opacity: 1;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-out;
+}
+
+/*路由切换动画——右移动*/
+.right-enter {
+  transform: translateX(-100%);
+}
+
+.right-enter.right-enter-active {
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+}
+
+.right-leave {
+  position: absolute;
+  top: 0;
+  //background: #fff;
+  z-index: 900;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.right-leave.right-leave-active {
+  opacity: 1;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+}
+
+//margin
+.marL(@num) {
+  margin-left: @num;
+}
+
+.marR(@num) {
+  margin-right: @num;
+}
+
+.marT(@num) {
+  margin-top: @num;
+}
+
+.marB(@num) {
+  margin-bottom: @num;
+}
+
+.marTB(@num) {
+  margin: @num 0;
+}
+
+.marLR(@num) {
+  margin: 0 @num;
+}
+
+//padding
+.padL(@num) {
+  padding-left: @num;
+}
+
+.padR(@num) {
+  padding-right: @num;
+}
+
+.padT(@num) {
+  padding-top: @num;
+}
+
+.padB(@num) {
+  padding-bottom: @num;
+}
+
+.padTB(@num) {
+  padding: @num 0;
+}
+
+.padLR(@num) {
+  padding: 0 @num;
+}
+
+.pad(@num) {
+  padding: @num;
+}
+
+//边框border
+.borB(@w:1px,@s:solid,@c:#dfdfdf) {
+  border-bottom: @arguments; /*px*/
+}
+
+.borT(@w:1px,@s:solid,@c:#dfdfdf) {
+  border-top: @arguments; /*px*/
+}
+
+.borL(@w:1px,@s:solid,@c:#dfdfdf) {
+  border-left: @arguments; /*px*/
+}
+
+.borR(@w:1px,@s:solid,@c:#dfdfdf) {
+  border-right: @arguments; /*px*/
+}
+
+.borRB(@w:1px,@s:solid,@c:#dfdfdf) {
+  border-right: @arguments; /*px*/
+  border-bottom: @arguments; /*px*/
+}
+
+.borLT(@w:1px,@s:solid,@c:#dfdfdf) {
+  border-left: @arguments; /*px*/
+  border-top: @arguments; /*px*/
+}
+
+.bor(@w:1px,@s:solid,@c:#dfdfdf) {
+  border: @arguments; /*px*/
+}
+
+//定位
+.abs() {
+  position: absolute;
+}
+
+.rel() {
+  position: relative;
+}
+
+.fix() {
+  position: fixed;
+}
+//字体
+.fs(@font:28px) {
+  font-size: @font; /*px*/
+}
+
+//行高
+.lineH(@lineH) {
+  line-height: @lineH;
+}

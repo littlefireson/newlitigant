@@ -1,0 +1,55 @@
+.quote{
+  background-color: #fff;
+  font-size: 14px;
+  &-title{
+    line-height: 56px;
+    padding-left: 20px;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  &-content{
+    padding: 20px;
+  }
+  .evidence-box{
+    margin-top: 0;
+    border: none;
+  }
+  .ant-tabs .ant-tabs-bar{
+    background-color: #eee;
+    border-top: none;
+  }
+  .ant-tabs-tab{
+    &:after{
+      content: '|';
+      position: relative;
+      color: #dfdfdf;
+      left: 20px;
+    }
+    &:nth-child(1){
+      &:after{
+        content: '';
+      }
+    }
+    &:nth-last-child(1){
+      &:after{
+        content: '';
+      }
+    }
+  }
+  .ant-tabs-tabpane{
+    border: 1px solid #dfdfdf;
+    border-top: none;
+  }
+  .ant-tabs-nav-wrap .ant-tabs-nav .ant-tabs-tab-active{
+    color: #20C1DC;
+  }
+  .ant-tabs-nav .ant-tabs-ink-bar{
+    height: 0;
+  }
+  .ant-tabs-extra-content{
+    margin-right: 20px;
+    line-height: 45px;
+    .ant-btn-primary{
+      font-weight: normal;
+    }
+  }
+}

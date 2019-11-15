@@ -1,0 +1,316 @@
+@caseDetail: caseDetail;
+.@{caseDetail} {
+    margin-bottom: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    .rightContent{
+        padding-left: 21px;
+    }
+    .ant-card{
+        margin-bottom: 20px;
+    }
+    .ant-card-head{
+        padding: 0 8px;
+        height: 36px;
+        line-height: 36px;
+        background-color: #F1F4F9;
+        border-bottom: none;
+        color: #333;
+    }
+    .ant-card-head-title{
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .ant-card-body{
+        color: #666;
+        font-size: 14px;
+        padding: 16px 8px;
+        &>footer{
+            display: block;
+            padding: 6px 0;
+            margin-top: 18px;
+            text-align: center;
+        }
+    }
+    .ant-steps{
+        padding-left: 16px;
+    }
+    .ant-steps-horizontal .ant-steps-item:not(:first-child) .ant-steps-head{
+        margin-left: -12px;
+    }
+    .ant-steps .ant-steps-head-inner{
+        width: 31px;
+        height: 31px;
+        line-height: 30px;
+    }
+    .ant-steps .ant-steps-main{
+        display: block;
+    }
+    .panelBg{
+        margin-bottom: 20px;
+        .ant-steps .ant-steps-item:nth-of-type(1) {
+            &.ant-steps-status-process{
+                .ant-steps-step .ant-steps-head .ant-steps-head-inner{
+                    background-color: #87d3c9;
+                }
+            }
+            &.ant-steps-status-finish{
+                .ant-steps-head .ant-steps-head-inner{
+                    border-color:#87d3c9;
+                    .ant-steps-icon{
+                        color: #87d3c9;
+                    }
+                }
+            }
+        } 
+        .ant-steps .ant-steps-item:nth-of-type(2) {
+            &.ant-steps-status-process{
+                .ant-steps-step .ant-steps-head .ant-steps-head-inner{
+                    background-color: #33a7d8;
+                }
+            }
+            &.ant-steps-status-finish{
+                .ant-steps-head .ant-steps-head-inner{
+                    border-color:#33a7d8;
+                    .ant-steps-icon{
+                        color: #33a7d8;
+                    }
+                }
+            }
+        } 
+        .ant-steps .ant-steps-item:nth-of-type(3) {
+            &.ant-steps-status-process{
+                .ant-steps-step .ant-steps-head .ant-steps-head-inner{
+                    background-color: #8869ad;
+                }
+            }
+            &.ant-steps-status-finish{
+                .ant-steps-head .ant-steps-head-inner{
+                    border-color:#8869ad;
+                    .ant-steps-icon{
+                        color: #8869ad;
+                    }
+                }
+            }
+        } 
+        .ant-steps .ant-steps-item:nth-of-type(4) {
+            &.ant-steps-status-process{
+                .ant-steps-step .ant-steps-head .ant-steps-head-inner{
+                    background-color: #ea6cb0;
+                }
+            }
+            &.ant-steps-status-finish{
+                .ant-steps-head .ant-steps-head-inner{
+                    border-color:#ea6cb0;
+                    .ant-steps-icon{
+                        color: #ea6cb0;
+                    }
+                }
+            }
+        } 
+        .ant-steps .ant-steps-item:nth-of-type(5) {
+            &.ant-steps-status-process{
+                .ant-steps-step .ant-steps-head .ant-steps-head-inner{
+                    background-color: #f59154;
+                }
+            }
+            &.ant-steps-status-finish{
+                .ant-steps-head .ant-steps-head-inner{
+                    border-color:#f59154;
+                    .ant-steps-icon{
+                        color: #f59154;
+                    }
+                }
+            }
+        } 
+    }
+    header.panelBg{
+            background-color: #fff;
+            padding: 20px 30px;
+    }
+    .case-tabs{
+        .ant-tabs-bar{
+            background-color: #fff;
+            margin-bottom: 0;
+            .theme-border;
+        }
+        .ant-tabs-ink-bar{
+            height: 100%;
+        }
+        .ant-tabs-nav .ant-tabs-tab-active{
+            //background-color: #20C1DC;
+            color: #fff;
+        }
+        .ant-tabs-nav .ant-tabs-ink-bar{
+            display: none !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab{
+            z-index: 5;
+            margin-right: 0;
+            padding: 12px 20px;
+            position: relative;
+            &.ant-tabs-tab-active{
+                .tab-bg{
+                    opacity: 1;
+                }
+            }
+            .tab-bg{
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                opacity: 0;
+                z-index: 6;
+                height: 43px;
+            }
+            .tab-border{
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0px;
+                z-index: 7;
+                height: 43px;
+                border-width: 1px;
+                border-style: solid;
+            }
+            .red-point{
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                right: 8px;
+                top:8px;
+                background-color: #ff0000;
+                z-index: 10;
+            }
+            span.tab-text{
+                position: relative;
+                z-index: 8;
+            }
+        }
+    }
+    &-content{
+        .caseDetail-nav{
+            .theme-border;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            a{
+                text-align: center;
+                line-height: 42px;
+                color: #333;
+                flex: 1;
+                border-right: 1px solid #dfdfdf;
+                text-decoration: none;
+                &:hover{
+                    background-color: #20C1DC;
+                    color: #fff;
+                }
+                &:last-child{
+                    border-right: none;
+                }
+                &.on{
+                    background-color: #20C1DC;
+                    color: #fff;
+                }
+                &[disabled]{
+                    background-color: #f2f2f2;
+                    color: #999;
+                }
+            }
+        }
+        &-panel{
+            .theme-border;
+            padding: 20px 50px;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            &:first-of-type{
+                border-top: none;
+            }
+            &-title{
+                background-color: #F8F8F8;
+                padding-left: 18px;
+                height: 56px;
+                line-height: 56px;
+                margin: -20px -50px 20px;
+                color: #333333;
+                font-size: 16px;
+                border-bottom: 1px solid #dfdfdf;
+            }
+        }
+    }
+}
+.content-box{
+    .theme-border;
+    background-color: #fff;
+    //&:first-of-type{
+        border-top: none;
+    //}
+    &-title{
+        border-bottom: 1px solid #dfdfdf;
+        padding: 0 16px;
+        line-height: 52px;
+        font-size: 16px;
+    }
+    &-article{
+        padding: 20px 30px;
+    }
+}
+.applyBook{
+    color: #666666;
+    font-size: 14px;
+    line-height: 2;
+    *{
+        color: inherit;
+        font-weight: normal;
+    }
+    h2{
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    &>section>footer{
+        margin-top: 30px;
+        line-height: 2;
+        aside{
+            margin-top: 10px;
+            text-align: right;
+        }
+    }
+}
+.apply-tip{
+    font-size: 14px;
+    margin: 2px 0;
+}
+.evidence-box{
+    margin-top: 40px;
+    .ant-table-small .ant-table-header > table, .ant-table-small .ant-table-body > table{
+        padding: 0;
+    }
+    .ant-table-small .ant-table-thead > tr > th{
+        background-color: #F8F8F8;
+    }
+    .ant-table-thead > tr > th{
+        text-align: center;
+    }
+    .ant-table table{
+        text-align: center;
+    }
+}
+.showHtml{
+    font-size: 14px;
+}
+
+// 撤案消息样式
+.withdraw-msg{
+    background-color: #ECF6FD;
+    line-height: 54px;
+    font-size: 14px;
+    color: #333;
+    padding-left: 20px;
+    border: 1px solid #ADD8F7;
+    border-bottom: none;
+}

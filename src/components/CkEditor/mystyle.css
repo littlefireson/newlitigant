@@ -1,0 +1,8 @@
+.ck-editor .ck-editor__main{
+    height: 180px;
+    flex-flow: column nowrap;
+}
+.ck-editor__editable {
+    height: 180px;
+    overflow-y: scroll;
+}

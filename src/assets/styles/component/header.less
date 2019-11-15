@@ -1,0 +1,188 @@
+@head_bg_color_1:#fff;
+@head_bg_color_2:#252525;
+@head_user_bg_1:#f8f8f8;
+@head_user_bg_2:#252525;
+@head_user_color:#fff;
+@head_a_color_1: #666;
+@head_a_color_2: #fff;
+@head_button_color_1:#20c1dc;
+@head_button_color_2:#d89e6d;
+.common-header{
+  min-height:64px;
+  background-color: @head_bg_color_2;
+  border-bottom:1px solid @head_bg_color_2;
+  .ant-menu{
+    background-color: @head_bg_color_2;
+  }
+  a{
+    color: @head_a_color_2;
+  }
+  &-wrapper{
+    min-width:958px;
+  }
+  &-logo{
+    padding:12px 10px;
+    height:100%;
+    float: left;
+    img{
+      display: block;
+      height:39px;
+    }
+  }
+  &-nav{
+    float: left;
+    height:100%;
+    .ant-menu-horizontal{
+      border-bottom:none;
+      font-size: 16px;
+      line-height: 26px;
+      padding-top:19px;
+      padding-left:10px;
+      .ant-menu-item{
+        padding:0 15px;
+        border-bottom:none;
+        a{
+          transition-property:color, border-color;
+          transition-duration:0s,0s;
+          color: @head_a_color_2;
+        }
+        &:hover{
+          border-bottom:none;
+          a{
+            border-bottom:1px solid @head_button_color_2;
+            color:@head_button_color_2;
+          }
+        }
+        &-selected{
+          a{
+            border-bottom:1px solid @head_button_color_2;
+            color:@head_button_color_2;
+          }
+        }
+      }
+    }
+  }
+  &-right{
+    float: right;
+    height:100%;
+    &-button{
+      font-size:16px;
+      color: #666;
+      padding:16px 0;
+      line-height: 30px;
+      button{
+        height:30px;
+        width:60px;
+        text-align: center;
+        border:1px solid @head_button_color_2;
+        background-color: transparent;
+        outline: none;
+        margin-left:20px;
+        font-size:14px;
+        color: @head_button_color_2;
+        line-height: 28px;
+        cursor: pointer;
+        letter-spacing:0;
+        span{
+          letter-spacing:0;
+
+        }
+        &:hover{
+          color: #fff;
+          background-color: @head_button_color_2;
+          border:1px solid #fff;
+        }
+        &.button-register{
+          color: #fff;
+          background-color: @head_button_color_2;
+        }
+      }
+
+    }
+    &-status{
+      line-height: 63px;
+      font-size:14px;
+      color: @head_button_color_2;
+      b{
+        font-weight:normal;
+        color: #fff;
+      }
+      .ant-dropdown-link{
+        &:hover{
+          color: @head_button_color_2;
+        }
+        span{
+          border-bottom:1px solid #dfdfdf;
+        }
+      }
+    }
+    .user-info{
+      display: inline-block;
+      vertical-align: middle;
+      background-color:@head_user_bg_2;
+      line-height: normal;
+      height: 66px;
+      text-align: center;
+      margin-left: 18px;
+      padding: 5px 0 0;
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+      max-width:111px;
+      color:@head_user_color;
+      .red-point{
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        right: 20px;
+        top:0px;
+        background-color: #ff4a4a;
+        color: #fff;
+        border-radius:50%;
+        text-decoration: none;
+        font-size: 12px;
+      }
+      &:hover{
+        em{
+          bottom: -24px;
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+        }
+      }
+      i{
+        display:inline-block;
+        font-size: 32px;
+        line-height: 1.2;
+        width: 100%;
+      }
+      b{
+        display: inline-block;
+        width: 100%;
+        line-height: 1;
+        position: relative;
+        z-index: 1;
+        background-color: @head_user_bg_2;
+        padding: 4px 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      em{
+        position: absolute;
+        right: 0;
+        bottom:0;
+        width:100%;
+        font-size: 14px;
+        line-height: 1;
+        padding: 5px 0;
+        display: block;
+        background-color: @head_bg_color_2;
+        color: @head_button_color_2;
+        transition:all .5s;
+        z-index: 0;
+      }
+    }
+  }
+}
